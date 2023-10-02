@@ -1,0 +1,393 @@
+#header{
+    width: 100%;
+    height: 100vh;
+    background-image:
+    linear-gradient(rgb(71, 112, 131),rgba(66, 166, 186, 0.1)),
+    url(../assests/images/bg\ kkk\).jpg);
+    background-size: 100%;
+    position: absolute;
+    top: 0px;
+    display: flex;
+    flex-wrap: wrap;
+    box-shadow: 0px 10px 10px black;
+    
+}
+*{
+    padding: 0px;
+    margin: 0px;
+    overflow-x: hidden;
+   
+    
+}
+#containerplace{
+    width: 50vw;
+    height: 70vh;
+    overflow: hidden;
+    position: absolute;
+    right: 30px;
+    bottom: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around ;
+    align-items: center;
+}
+
+#heading{
+    width: 45vw;
+    height: 70vh;
+    /* top: 100px; */
+    position: absolute;
+    left: 0px;
+    bottom: 30px;
+    overflow-y: hidden;
+    /* background-color: aquamarine; */
+
+}
+#textheading{
+    font-size: 9vw;
+    position: absolute;
+    bottom: 80px;
+    padding-left: 30px;
+    color: white;
+    text-shadow: 5px 5px 5px black;
+    letter-spacing: 5px;
+   
+}
+#place1{
+    background-image: linear-gradient(rgba(128,128,128,0.413),rgba(0,0,0,0.426)),url(../assests/images/italy.jpg);
+}
+#place2{
+    background-image: linear-gradient(rgba(128,128,128,0.413),rgba(0,0,0,0.426)),url(../assests/images/switzerland.jpg);
+}
+#place3{
+    background-image: linear-gradient(rgba(128,128,128,0.413),rgba(0,0,0,0.426)),url(../assests/images/japan.jpeg);
+}
+#place4{
+    background-image: linear-gradient(rgba(128,128,128,0.413),rgba(0,0,0,0.426)),url(../assests/images/australia.jpeg);
+}
+
+.places{
+    width: 20vw;
+    height: 30vh;
+    background-size: 100% 30vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: all 0.5s;
+    box-shadow: 2px 2px 5px black;
+    border-radius: 5px;
+    display: flex;
+    align-items:center ;
+    justify-content:center ;
+    color: transparent;
+    position: relative;
+  
+}
+.places:hover{
+    background-size: 110% 32vh;
+    transform: scale(1.2);
+    color: white;
+    font-size: 24px;
+    text-shadow: 2px 2px 5px black;
+
+    
+}
+
+/* body of total */
+#bodyofpage{
+    width: 100vw;
+    height: 550vh;
+    background-color:whitesmoke;
+    position: relative;
+    z-index: -1;
+    /* overflow: hidden; */
+   overflow-y: hidden;
+   
+}
+.country{
+    width: 250px;
+    height: 100px;
+    font-size: 80px;
+    position: absolute;
+    left: 420px;
+    text-shadow: 10px 10px 10px black;
+    z-index: 9;
+    color: white;
+}
+
+
+/* first place */
+
+#container1{
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 110vh;
+    background-color: rgb(80, 148, 151);
+    box-shadow: 0px 10px 10px black;
+   
+}
+#loc1{
+    width: 683px;
+    height: 250px;
+background-color: orange;
+clip-path: polygon(100% 0, 100% 100%, 0 100%, 59% 0);
+position: absolute;
+right: 0px;
+z-index: 2;
+
+}
+iframe{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    right: 0px;
+    transition: transform 0.5s;
+
+}
+#video1{
+    width: 100%;
+    height: 552px;
+    background-color: pink;
+    position: absolute;
+    clip-path: polygon(100% 50%, 100% 100%, 0 100%, 40% 50%);
+    overflow: hidden;
+    right: 0px;
+}
+#vid1{
+    position: absolute;
+    width: 1200px;
+    height: 780px;
+    border-top: 15px solid rgb(50,50,50);
+    transition: transform 0.5s;
+   
+}
+#vid1 :hover{
+    transform: scale(1.2);
+}
+
+ #loc1 :hover{
+    transform: scale(1.2);
+}
+#dishheading1{
+
+    position: absolute;
+    width: 400px;
+    height: 230px;
+    padding-top: 80px;
+}
+#text1{
+    font-size: 20px;
+    color: white;
+    padding-top: 20px;
+    text-indent: 10px;
+}
+
+#container2{
+    margin-top: 220vh;
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(80, 148, 151);
+    position: absolute;
+    box-shadow: 0px 10px 10px black;
+}
+
+#loc2{
+width: 1200px;
+height: 500px;
+background-color: orange;
+clip-path: polygon(0 0, 20% 0, 50% 50%, 0 50%);
+position: absolute;
+left: 0px;
+z-index: 2;
+
+}
+#video2{
+    width: 100%;
+    height: 552px;
+    background-color: pink;
+    position: absolute;
+    left: 0px;
+    
+    clip-path: polygon(0 50%, 55% 50%, 100% 100%, 0 100%);
+
+}
+
+
+#vid2{
+    position: absolute;
+    left: 0px;
+    width: 1200px;
+    height: 800px;
+    border-top: 15px solid rgb(50,50,50);
+    transition: transform 0.5s;
+   
+}
+#vid2 :hover{
+    transform: scale(1.2);
+}
+
+ #loc2 :hover{
+    transform: scale(1.2);
+}
+#dishheading2{
+  
+    position: absolute;
+    width: 400px;
+    height: 230px;
+    padding-top: 80px;
+    right: 15px;
+}
+#text2{
+    font-size: 20px;
+    color: white;
+    padding-top: 20px;
+    text-indent: 10px;
+  
+}
+
+
+
+
+#container3{
+    margin-top: 330vh;
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(80, 148, 151);
+    position: absolute;
+    box-shadow: 0px 10px 10px black;
+    overflow-y: hidden;
+}
+
+#loc3{
+    margin-top: -3.2vh;
+    width: 683px;
+    height: 250px;
+background-color:transparent;
+clip-path: polygon(100% 0, 100% 100%, 0 100%, 59% 0);
+position: absolute;
+right: 0px;
+z-index: 2;
+
+
+
+}
+#video3{
+    margin-top: -3.2vh;
+    width: 100%;
+    height: 572px;
+    background-color: pink;
+    position: absolute;
+    clip-path: polygon(100% 50%, 100% 100%, 0 100%, 40% 50%);
+    
+}
+
+
+#vid3{
+    position: absolute;
+    width: 1200px;
+    height:800px;
+    border-top: 15px solid rgb(50,50,50);
+    transition: transform 0.5s;
+    right: 0px;
+    overflow-x: hidden;
+}
+#vid3 :hover{
+    transform: scale(1.2);
+}
+
+ #loc3 :hover{
+    transform: scale(1.2);
+}
+#dishheading3{
+  
+    position: absolute;
+    width: 400px;
+    height: 230px;
+    padding-top: 80px;
+    
+}
+#text3{
+    font-size: 20px;
+    color: white;
+    padding-top: 20px;
+    text-indent: 10px;
+}
+
+#container4{
+    margin-top: 440vh;
+     width: 100%;
+     height: 100vh;
+     background-color: rgb(80, 148, 151);
+     position: absolute;
+     box-shadow: 0px 10px 10px black;
+    overflow-y: hidden; 
+ }
+ 
+ #loc4{
+     width: 1200px;
+     height: 500px;
+ background-color: orange;
+ clip-path: polygon(0 0, 20% 0, 50% 50%, 0 50%);
+ position: absolute;
+ left: 0px;
+ z-index: 2;
+ 
+ }
+ #video4{
+     width: 100%;
+     height: 552px;
+     background-color: pink;
+     position: absolute;
+     clip-path: polygon(0 50%, 55% 50%, 100% 100%, 0 100%);
+ }
+ 
+ #vid4{
+     position: absolute;
+     width: 1200px;
+     height: 800px;
+     border-top: 15px solid rgb(50,50,50);
+     transition: transform 0.5s;
+    
+ }
+ #vid4 :hover{
+     transform: scale(1.2);
+ }
+ 
+  #loc4 :hover{
+     transform: scale(1.2);
+ }
+ #dishheading4{
+    
+     position: absolute;
+     width: 400px;
+     height: 230px;
+     padding-top: 80px;
+     right: 15px;
+ }
+ #text4{
+     font-size: 20px;
+     color: white;
+     padding-top: 20px;
+     text-indent: 10px;
+ }
+ #top{
+    width:90px;
+    height: 90px;
+    background-color: white;
+    position: absolute;
+    z-index: 30;
+    top: 510vh;
+    right: 20px;
+    border-radius: 100%;
+    overflow-y: hidden;
+    cursor: pointer;
+}
+#topup{
+    width: 90px;
+    height: 90px;
+    z-index: 30;
+    border-radius: 100%;
+    transition: 1sec;
+    cursor: pointer;
+   
+}

@@ -1,0 +1,144 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+
+#header{
+    width: 100%;
+    height: 100vh;
+    background-size: 100% 100vh;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 2s;
+    box-shadow: 0px 5px 10px black;
+}
+#left{
+   height: 100px; 
+   width: 100px;
+   position: absolute;
+   left: 0px;
+   font-size: 60px;
+   background-color: transparent;
+   border: none;
+   cursor: pointer;
+}
+#right{
+    height: 100px; 
+    width: 100px;
+    position: absolute;
+    right: 0px;
+    font-size: 60px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+ }
+ #pageHeading{
+    font-size: 120px;
+    letter-spacing: 50px;
+    color: greenyellow;
+    text-shadow: 5px 5px 5px black;
+ }
+ #navbar{
+    position: absolute;
+    height: 120px;
+    top: 0px;
+    display: flex;
+    left: 20px;
+ }
+ #logout{
+    font-size: 24px;
+    position: absolute;
+    left: 90vw;
+    top: 30px;
+ }
+ a{
+    text-decoration: none;
+    color: white;
+ }
+ li{
+    list-style: none;
+ }
+  /* li:hover{
+     
+      transition: scale 2s;
+       
+ }  */
+ #home{
+   
+    font-size: 24px;
+    position: absolute;
+    left: 5vw;
+    top: 30px;
+    color: white;
+ }
+ #info{
+    font-size: 24px;
+    position: absolute;
+    left: 15vw;
+    top: 30px;
+    /* color: black; */
+ }
+
+ /* this is gallary code */
+
+
+
+
+ body{
+    background-image: linear-gradient(white,cadetblue);
+    background-size: 100% 280vh;
+ }
+ #gallary{
+    position: absolute;
+    top: 110vh;
+    display: flex;
+    width: 100%;
+    height: 250px;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    row-gap: 10vh;
+    column-gap: 5vh;
+ }
+ .images{
+    width: 220px;
+    height: 150px;
+    transition: all 0.5s;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px black;
+    transition-timing-function: ease-out;
+ }
+ .images:hover{
+    transform: scale(1.2);
+ }
+ #bodyofGallay{
+    position: absolute;
+    top: 40vh;
+    width: 100%;
+ }
+ #bigImage{
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.279);
+    position: fixed;
+    top: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+ }
+ #bigimg{
+    width: 600px;
+    height: 400px;
+ }
+ #close{
+    position: fixed;
+    top: 30px;
+    right: 30px;
+    color: white;
+    cursor: pointer;
+ }
+

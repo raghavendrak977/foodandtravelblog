@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html >
+<head>
+    <title>Gallery</title>
+    <!-- <link rel="stylesheet" href="../CSS/gallery.css">
+    <script src="../JS/gallery.js"></script> -->
+    <style>
+      *{
+    padding: 0px;
+    margin: 0px;
+}
+
+#header{
+    width: 100%;
+    height: 100vh;
+    background-size: 100% 100vh;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 2s;
+    box-shadow: 0px 5px 10px black;
+}
+#left{
+   height: 100px; 
+   width: 100px;
+   position: absolute;
+   left: 0px;
+   font-size: 60px;
+   background-color: transparent;
+   border: none;
+   cursor: pointer;
+}
+#right{
+    height: 100px; 
+    width: 100px;
+    position: absolute;
+    right: 0px;
+    font-size: 60px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+ }
+ #pageHeading{
+    font-size: 120px;
+    letter-spacing: 50px;
+    color: greenyellow;
+    text-shadow: 5px 5px 5px black;
+ }
+ #navbar{
+    position: absolute;
+    height: 120px;
+    top: 0px;
+    display: flex;
+    left: 20px;
+ }
+ #logout{
+    font-size: 24px;
+    position: absolute;
+    left: 90vw;
+    top: 30px;
+ }
+ a{
+    text-decoration: none;
+    color: white;
+ }
+ li{
+    list-style: none;
+ }
+  /* li:hover{
+     
+      transition: scale 2s;
+       
+ }  */
+ #home{
+   
+    font-size: 24px;
+    position: absolute;
+    left: 5vw;
+    top: 30px;
+    color: white;
+ }
+ #info{
+    font-size: 24px;
+    position: absolute;
+    left: 15vw;
+    top: 30px;
+    /* color: black; */
+ }
+
+ /* this is gallary code */
+
+
+
+
+ body{
+    background-image: linear-gradient(white,cadetblue);
+    background-size: 100% 280vh;
+ }
+ #gallary{
+    position: absolute;
+    top: 110vh;
+    display: flex;
+    width: 100%;
+    height: 250px;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    row-gap: 10vh;
+    column-gap: 5vh;
+ }
+ .images{
+    width: 220px;
+    height: 150px;
+    transition: all 0.5s;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px black;
+    transition-timing-function: ease-out;
+ }
+ .images:hover{
+    transform: scale(1.2);
+ }
+ #bodyofGallay{
+    position: absolute;
+    top: 40vh;
+    width: 100%;
+ }
+ #bigImage{
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.279);
+    position: fixed;
+    top: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+ }
+ #bigimg{
+    width: 600px;
+    height: 400px;
+ }
+ #close{
+    position: fixed;
+    top: 30px;
+    right: 30px;
+    color: white;
+    cursor: pointer;
+ }
+
+
+    </style>
+<body onload="header()">
+
+  <div id="header">
+    <ul id="navbar"> 
+      <li class="sbi"><a href="../HTML/home.html" style="color:darkblue;" id="home">Home</a</li>
+      <li class="sbi"><a href="../HTML/info.html" id="info">Info</a></li>
+  <li class="sbi" id="logout">
+       <a href="../index.html">Logout</a></li>
+     </ul>
+    <h1 id="pageHeading"> Gallery</h1>
+<button id="left"  onclick="left()"> < </button>
+<button id="right" onclick="right()">></button>
+
+  </div> 
+  <div id="bodyofGallary">
+    <div id="gallary">
+      <img class="images" onclick="openTheImage(0)" src="../assests/1to13/images/0.jpeg">
+      <img class="images" onclick="openTheImage(1)" src="../assests/1to13/images/1.jpeg">
+      <img class="images" onclick="openTheImage(2)" src="../assests/1to13/images/2.jpeg">
+      <img class="images" onclick="openTheImage(3)" src="../assests/1to13/images/3.jpeg">
+      <img class="images" onclick="openTheImage(4)" src="../assests/1to13/images/4.jpeg">
+      <img class="images" onclick="openTheImage(5)" src="../assests/1to13/images/5.jpeg">
+      <img class="images" onclick="openTheImage(6)" src="../assests/1to13/images/6.jpeg">
+      <img class="images" onclick="openTheImage(7)" src="../assests/1to13/images/7.jpeg">
+      <img class="images" onclick="openTheImage(8)" src="../assests/1to13/images/8.jpeg">
+      <img class="images" onclick="openTheImage(9)" src="../assests/1to13/images/9.jpeg">
+      <img class="images" onclick="openTheImage(10)" src="../assests/1to13/images/10.jpeg">
+      <img class="images" onclick="openTheImage(11)" src="../assests/1to13/images/11.jpeg">
+      <img class="images" onclick="openTheImage(12)" src="../assests/1to13/images/12.jpeg">
+      <img class="images" onclick="openTheImage(13)" src="../assests/1to13/images/13.jpeg">
+    </div>
+  </div> 
+  <div id="bigImage" style="display: none;">
+    <h1 id="close" onclick="closeTheImage()">X</h1>
+    <img id="bigimg">
+
+  </div>
+
+
+
+  <script>
+    var arrayImages=["0.jpeg","1.jpeg","2.jpeg","3.jpeg","4.jpeg","5.jpeg","6.jpeg","7.jpeg","8.jpeg","9.jpeg","10.jpeg","11.jpeg","12.jpeg","13.jpeg"];
+var i=0;
+function header()
+{
+if(i>=7)
+{
+  i=0;  document.getElementById("header").style.backgroundImage=`url(../assests/1to13/images/${arrayImages[i]})`
+}
+else{
+    document.getElementById("header").style.backgroundImage=`url(../assests/1to13/images/${arrayImages[i]})` 
+    i++;
+}
+ var time=setTimeout(header,2000);
+}
+function right(){
+  i++;
+  if(i>arrayImages.length-1)
+  {
+    i=0;
+    document.getElementById("header").style.backgroundImage=`url(../assests/1to13/images/${arrayImages[i]})`
+  }
+  else{
+    document.getElementById("header").style.backgroundImage=`url(../assests/1to13/images/${arrayImages[i]})`
+  }
+}
+function left()
+{
+  i--;
+  if(i<0)
+  {
+    i=arrayImages.length-1;
+    document.getElementById("header").style.backgroundImage=`url(../assests/1to13/images/${arrayImages[i]})`
+  }
+  else{
+    document.getElementById("header").style.backgroundImage=`url(../assests/1to13/images/${arrayImages[i]})`
+  } 
+}
+
+// this is gallery code
+
+var img=document.getElementsByClassName("images");
+console.log(img)
+// for(i=0;i<img.length-1;i++)
+// {
+  //  img[i].src=`../assests/1to13/images/${i} `  
+ // img[i].src=`../../JAVA SCRIPT/images/${i}.jpeg`
+  //img[i].src=`../assests/1to13/images/${i}.jpeg`
+  
+// }
+function closeTheImage()
+{
+  document.getElementById("bigImage").setAttribute("style","display:none")
+}
+function openTheImage(img)
+{
+  document.getElementById("bigimg").setAttribute("src",`../assests/1to13/images/${img}.jpeg`)
+  document.getElementById("bigImage").removeAttribute("style");
+}
+  </script>
+</body>
+</html>

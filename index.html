@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>login</title>
+    <!-- <link rel="stylesheet" href="./CSS/index.css"></link> -->
+    <!-- <script src="./JS/index.js" defer ></script> -->
+   <style>
+    *{
+    padding: 0px;
+    margin: 0px;   
+    
+}
+body{
+    width: 100vw;
+    height: 100vh;
+}
+#main{
+       width: 100vw;
+    height: 100vh;
+    background-image:linear-gradient(90deg,#ff0080, #40e0d0, #ff8c00 );
+    position: absolute;
+    display: flex;
+}  
+#big{
+    width: 80vw;
+    height: 70vh;
+    background-image:linear-gradient(90deg, #3d3393 , #2b76b9 , #2cacd1, #35eb93);
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 80px;
+    left: 150px;
+    border-radius: 20px;
+}
+#small{
+    width: 60vw;
+    height: 50vh;
+    background-image: linear-gradient(360deg,#D4145A,#FBB03B );
+    position: relative;
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
+    align-items:baseline ;
+   bottom: 0px;
+    left: 10px;
+    border-radius: 20px;
+}
+#loginname{
+    position: absolute;
+    top: 10px;
+    color: white;
+
+}
+#pass{
+    width: 300px;
+    height: 30px;
+    border-radius: 100px;
+    position: absolute;
+    top: 140px;
+    font-size: 20px;
+    border:5px solid blue;
+    right: 200px;
+   
+
+}
+#mail{
+    width: 300px;
+    height: 30px;
+    border-radius: 100px;
+    border: none;
+    position: absolute;
+    top: 80px;
+    font-size: 20px;
+    border:5px solid blue;
+    right: 200px;
+   
+}
+#but{
+    width: 100px;
+    height: 30px;
+    border-radius: 10px;
+    position: absolute;
+    bottom: 10px;
+    border-style: none;
+    background-color: white; 
+    right: 300px; 
+}
+#result{
+    color: red;
+    position: absolute;
+    right: 280px;
+    bottom: 50px
+}
+#monkey{
+width: 28px;
+height: 28px;
+border-radius: 100%;
+position: absolute;
+bottom: 86px;
+right: 210px;
+
+}
+   </style>
+</head>
+<body id="bdy" >
+   
+   <div id="main" >
+    <form id="fom">
+    <div id="big">
+       <!-- <img src="./HTML/Home.html"> -->
+        <div id="small"> 
+       <h1 id="loginname"> Login</h1>
+       <input type="email" id="mail" placeholder="Enter Your Email">
+       <input type="password" id="pass" placeholder="Enter the password">
+       <h3 id="result"></h3>
+       <input type="button" id="but" value="Login" onclick="authorization()">
+       <img id="monkey" src="./assests/images/close.jpg" onmousedown="visiblepassword()" onmouseup="hidepassword()">
+        </div>
+    </div>
+</form>
+   </div> 
+   <script>
+    var email="hero@gmail.com"
+var mypass="123";
+function authorization()
+{
+  var usergivenUSID=document.getElementById("mail").value;
+  var usergivenPass=document.getElementById("pass").value;
+  if(email==usergivenUSID && mypass==usergivenPass)
+  {
+    document.getElementById("fom").setAttribute("action","./HTML/home.html")
+    document.getElementById("but").setAttribute("type","submit")
+  }
+  else if(email!=usergivenUSID && mypass==usergivenPass)
+    {
+        document.getElementById("mail").style.borderColor="red";
+        document.getElementById("pass").style.borderColor="royalblue";
+        document.getElementById("main").style.backgroundImage="linear-gradient(70deg,red,purple)"
+        document.getElementById("result").innerHTML="Wrong email id"
+  }
+  else if(email==usergivenUSID && mypass!=usergivenPass)
+  {
+    document.getElementById("mail").style.borderColor="royalblue";
+    document.getElementById("pass").style.borderColor="red";
+    document.getElementById("main").style.backgroundImage="linear-gradient(70deg,red,red)"
+    document.getElementById("result").innerHTML="Wrong password"
+  }
+  else{
+    document.getElementById("mail").style.borderColor="red";
+    document.getElementById("pass").style.borderColor="red";
+    document.getElementById("main").style.backgroundImage="linear-gradient(70deg,red,red)"
+    document.getElementById("result").innerHTML="Wrong id and password"
+  }
+}
+function visiblepassword()
+{
+    document.getElementById("pass").removeAttribute("type")
+    document.getElementById("monkey").setAttribute("src","./assests/images/open.jpg")
+    document.getElementById("monkey").style.transform="rotateY(360deg)"
+}
+function hidepassword()
+{
+    document.getElementById("pass").setAttribute("type","password")
+    document.getElementById("monkey").setAttribute("src","./assests/images/close.jpg")
+    document.getElementById("monkey").style.transform="rotateY(-360deg)"
+}
+   </script>
+</body>
+</html>
